@@ -4,6 +4,6 @@ En este proyecto, utilicé Node.js, Express.js y el módulo de Axios para integr
 
 ## Instalación
 
-1. Clona el repositorio: git clone https://github.com/Ivanm2001/Blog_Web_App.git
+1. Clona el repositorio: 'git clone https://github.com/Ivanm2001/Blog_Web_App.git'
 2. Navega al directorio del proyecto.
 3. Instala las dependencias: 'npm install' 
