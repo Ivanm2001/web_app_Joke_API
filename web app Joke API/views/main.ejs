@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Title</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Optional: Link to CSS file -->
+  </head>
+  <body>
+    <main>
+        <div class="titulo-principal">
+            <p class="pregunta">Want to hear something funny?</p>
+        </div>
+        <div class="caja-form"> 
+            <form id="myForm" method="post" action="/get-joke">
+                <label>Search for a joke that
+                    contains this word:</label>
+                <input type="text" id="idInput" name="id" placeholder="(optional)" class="palabra">
+    
+                <select id="categorias" name="categorias" class="categorias">
+                    <option value="Any" selected>Any</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Misc">Misc</option>
+                    <option value="Dark">Dark</option> 
+                    <option value="Pun">Pun</option>
+                    <option value="Spooky">Spooky</option>
+                    <option value="Christmas">Christmas</option>
+                </select>
+    
+                <input id="get" type="submit" value="Generate Joke" class="boton">
+            </form>
+        </div>
+        <% if (locals.data) { %>
+            <% if (!data.error) { %>
+                <% if (data.type == "single") { %>
+                    <div class = "caja-chiste"> 
+                        <div class = "punchline">
+                            <p class= "chiste">
+                                <%= data.joke %>
+                            </p>
+                        </div>
+                  </div>
+                <% } else { %>
+                    <div class = "caja-chiste"> 
+                        <div class = "punchline">
+                            <p class= "chiste">
+                                <%= data.setup %>
+                            </p>
+                            <p class= "chiste">
+                                <%= data.delivery %>
+                            </p>
+                        </div>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <div class = "caja-chiste"> 
+                    <div class = "punchline">
+                        <p class= "chiste">
+                            <%= data.message %>
+                        </p>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+    </main>
+  </body>
+</html>
