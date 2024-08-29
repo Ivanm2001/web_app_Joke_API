@@ -1,4 +1,4 @@
-#Resumen:
+##Resumen:
 
 En este proyecto, utilice Node.js, Express.js y el modulo de Axios para integrar una API publica capaz de darme una broma en ingles en base a las caracteristicas indicadas. El foco principal de este proyecto fue poder integrar la API correctamente y seguir practicando el uso de protocolos HTTP.
 
